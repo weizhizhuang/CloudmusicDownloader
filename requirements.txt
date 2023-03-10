@@ -1,0 +1,4 @@
+flet
+fleter
+requests
+pyinstaller
