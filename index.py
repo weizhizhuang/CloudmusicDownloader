@@ -5,11 +5,11 @@ from dld import *
 #from flet import Page, Checkbox, ElevatedButton, Row, TextField, Text, ProgressBar, FilePicker, ProgressRing
 
 def getSongs(id):
-    url='https://cm-api.scaredcube.ml/playlist/detail?id='+id
+    url='https://cm-api.scc.lol/playlist/detail?id='+id
     res = requests.post(url).json()
     return res['playlist']['tracks']#[0]['name']
 def getMp3Url(id):
-    url='https://cm-api.scaredcube.ml/song/url?id='+id
+    url='https://cm-api.scc.lol/song/url?id='+id
     res = requests.post(url).json()
     return res['data']#[0]['url']
 def pushBark(n):
