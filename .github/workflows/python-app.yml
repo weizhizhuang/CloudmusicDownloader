@@ -9,21 +9,6 @@ permissions:
   contents: read
 
 jobs:
-  build-on-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.8"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: build
-      run: |
-        flet pack index.py --name cloudmusicDownloader-linux
   build-on-windows:
     runs-on: windows-latest
     steps:
@@ -44,26 +29,10 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        tag_name: ${{ github.ref }}
-        name: Release ${{ github.ref }}
+        tag_name: test
+        name: Release
         body: TODO New Release.
         draft: false
         prerelease: false
         files: |
           dist\cloudmusicDownloader-windows.exe
-  
-  build-on-macOS:
-    runs-on: macOS-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.8"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: build
-      run: |
-        flet pack index.py --name cloudmusicDownloader-macos
