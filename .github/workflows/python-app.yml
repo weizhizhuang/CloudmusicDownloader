@@ -33,5 +33,4 @@ jobs:
         body: Trying.
         draft: false
         prerelease: false
-        file: |
-          D:\a\CloudmusicDownloader\CloudmusicDownloader\dist\cloudmusicDownloader-windows.exe
+        file: D:\a\CloudmusicDownloader\CloudmusicDownloader\dist\cloudmusicDownloader-windows.exe
