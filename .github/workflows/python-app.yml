@@ -30,8 +30,8 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: test
         name: Release
-        body: TODO New Release.
+        body: Trying.
         draft: false
         prerelease: false
         file: |
-          ./dist/cloudmusicDownloader-windows.exe
+          /dist/cloudmusicDownloader-windows.exe
